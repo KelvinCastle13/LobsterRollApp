@@ -10,10 +10,8 @@ import {
 } from 'react-native';
 import { Button } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
-import { ImageBackground } from 'react-native';
 import {Image, Dimensions} from 'react-native';
 import { useFonts, Chewy_400Regular as ChewyRegular } from '@expo-google-fonts/chewy';
-import AppLoading from 'expo-app-loading';
 
 export default function App() {
   const [type, setType] = useState('size');
@@ -43,8 +41,8 @@ export default function App() {
       setResult(`${converted.toFixed(2)} Lobster Roll`);
       break;
     case 'price':
-      converted = value * 32;
-      setResult(`$${converted.toFixed(2)} Lobster Roll`);
+      converted = value * .0313;
+      setResult(`${converted.toFixed(2)} Lobster Roll`);
       break;
     default:
       setResult(null);
